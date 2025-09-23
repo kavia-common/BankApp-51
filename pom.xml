@@ -16,6 +16,9 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.checkstyle.version>3.3.1</maven.checkstyle.version>
+		<maven.pmd.version>3.21.2</maven.pmd.version>
+		<spotbugs.plugin.version>4.8.6.4</spotbugs.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -79,7 +82,96 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<!-- Checkstyle Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${maven.checkstyle.version}</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<consoleOutput>true</consoleOutput>
+					<failOnViolation>false</failOnViolation>
+					<includeTestSourceDirectory>true</includeTestSourceDirectory>
+					<linkXRef>false</linkXRef>
+				</configuration>
+				<executions>
+					<execution>
+						<id>checkstyle-validate</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- PMD Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>${maven.pmd.version}</version>
+				<configuration>
+					<printFailingErrors>true</printFailingErrors>
+					<failOnViolation>false</failOnViolation>
+					<linkXRef>false</linkXRef>
+					<targetJdk>1.8</targetJdk>
+					<includeTests>true</includeTests>
+				</configuration>
+				<executions>
+					<execution>
+						<id>pmd-validate</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- SpotBugs Plugin -->
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>${spotbugs.plugin.version}</version>
+				<configuration>
+					<effort>Max</effort>
+					<threshold>Low</threshold>
+					<xmlOutput>true</xmlOutput>
+					<failOnError>false</failOnError>
+					<includeTests>true</includeTests>
+				</configuration>
+				<executions>
+					<execution>
+						<id>spotbugs-analyze</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>spotbugs</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${maven.checkstyle.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>${maven.pmd.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>${spotbugs.plugin.version}</version>
+			</plugin>
+		</plugins>
+	</reporting>
 
 </project>
