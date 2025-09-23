@@ -1,13 +1,12 @@
-# Banking Application using Java8, Spring Boot, Spring Security and H2 DB
+# Banking Application using Java 21, Spring Boot 3, Spring Security and H2 DB
 
 RESTful API to simulate simple banking operations. 
 
 ## Requirements
 
-*	CRUD operations for customers and accounts.
-*	Support deposits and withdrawals on accounts.
-*	Internal transfer support (i.e. a customer may transfer funds from one account to another).
-
+* CRUD operations for customers and accounts.
+* Support deposits and withdrawals on accounts.
+* Internal transfer support (i.e. a customer may transfer funds from one account to another).
 
 ## Getting Started
 
@@ -15,34 +14,34 @@ RESTful API to simulate simple banking operations.
 
 ```
 git clone https://github.com/sbathina/BankApp
-
 ```
+
 2. Enable Lombok support on your IDE
 
 Refer to the following link for instructions:
 
 ```
 https://projectlombok.org/setup/eclipse
-
 ```
+
 3. Open IDE of your choice and Import as existing maven project in your workspace
 
 ```
 - Import existing maven project
+- Ensure JDK 21 is configured
 - Run mvn clean install
 - If using STS, Run As Spring Boot App
-
 ```
-4. Default port for the api is 8989
 
+4. Default port for the api is 8989
 
 ### Prerequisites
 
-* Java 8
+* Java 21
 * Spring Tool Suite 4 or similar IDE
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-### Maven Dependencies
+### Maven Dependencies (high-level)
 
 ```
 spring-boot-starter-actuator
@@ -52,20 +51,23 @@ spring-boot-starter-web
 spring-boot-devtools
 h2 - Inmemory database
 lombok - to reduce boilerplate code
-springfox-swagger2
-springfox-swagger-ui
+springdoc-openapi-starter-webmvc-ui
 spring-boot-starter-test
 spring-security-test
-
 ```
 
-## Swagger
+## OpenAPI (Swagger UI)
 
-Please find the Rest API documentation in the below url
+Access the Rest API documentation at:
 
 ```
 http://localhost:8989/bank-api/swagger-ui.html
+```
 
+OpenAPI JSON:
+
+```
+http://localhost:8989/bank-api/v3/api-docs
 ```
 
 ## H2 In-Memory Database
@@ -75,7 +77,6 @@ define datasource properties in application.yml
 
 ```
 http://localhost:8989/bank-api/h2-console/
-
 ```
 
 ## Testing the Bank APP Rest Api
@@ -84,8 +85,6 @@ http://localhost:8989/bank-api/h2-console/
 
 2. Browse to <project-root>/src/test/resources to find sample requests to add customer and accounts.
 
-
 ## Authors
 
 * **Shyam Bathina**
-
