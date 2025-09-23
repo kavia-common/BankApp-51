@@ -15,10 +15,11 @@
 	<description>Bank App Spring Boot Project</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 		<maven.checkstyle.version>3.3.1</maven.checkstyle.version>
 		<maven.pmd.version>3.21.2</maven.pmd.version>
 		<spotbugs.plugin.version>4.8.6.4</spotbugs.plugin.version>
+		<maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -115,7 +116,7 @@
 					<printFailingErrors>true</printFailingErrors>
 					<failOnViolation>false</failOnViolation>
 					<linkXRef>false</linkXRef>
-					<targetJdk>1.8</targetJdk>
+					<targetJdk>${java.version}</targetJdk>
 					<includeTests>true</includeTests>
 				</configuration>
 				<executions>
@@ -150,6 +151,21 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			<!-- Maven Compiler Plugin for Java 17 and JPMS access -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<compilerArgs>
+						<arg>--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+						<arg>--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
+					</compilerArgs>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

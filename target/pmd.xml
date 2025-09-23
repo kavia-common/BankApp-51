@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2025-09-23T10:03:14.339">
+<file name="/home/kavia/workspace/code-generation/BankApp-51/src/main/java/com/coding/exercise/bankapp/repository/CustomerRepository.java">
+<violation beginline="13" endline="13" begincolumn="12" endcolumn="72" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.repository" class="CustomerRepository" method="findByCustomerNumber" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'findByCustomerNumber': the method is declared in an interface type
+</violation>
+</file>
+<file name="/home/kavia/workspace/code-generation/BankApp-51/src/main/java/com/coding/exercise/bankapp/repository/TransactionRepository.java">
+<violation beginline="14" endline="14" begincolumn="12" endcolumn="79" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.repository" class="TransactionRepository" method="findByAccountNumber" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'findByAccountNumber': the method is declared in an interface type
+</violation>
+</file>
+<file name="/home/kavia/workspace/code-generation/BankApp-51/src/main/java/com/coding/exercise/bankapp/service/BankingService.java">
+<violation beginline="14" endline="14" begincolumn="12" endcolumn="43" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'findAll': the method is declared in an interface type
+</violation>
+<violation beginline="16" endline="16" begincolumn="12" endcolumn="79" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="addCustomer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'addCustomer': the method is declared in an interface type
+</violation>
+<violation beginline="18" endline="18" begincolumn="12" endcolumn="69" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="findByCustomerNumber" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'findByCustomerNumber': the method is declared in an interface type
+</violation>
+<violation beginline="20" endline="20" begincolumn="12" endcolumn="103" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="updateCustomer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'updateCustomer': the method is declared in an interface type
+</violation>
+<violation beginline="22" endline="22" begincolumn="12" endcolumn="71" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="deleteCustomer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'deleteCustomer': the method is declared in an interface type
+</violation>
+<violation beginline="24" endline="24" begincolumn="12" endcolumn="74" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="findByAccountNumber" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'findByAccountNumber': the method is declared in an interface type
+</violation>
+<violation beginline="26" endline="26" begincolumn="12" endcolumn="108" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="addNewAccount" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'addNewAccount': the method is declared in an interface type
+</violation>
+<violation beginline="28" endline="28" begincolumn="12" endcolumn="104" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="transferDetails" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'transferDetails': the method is declared in an interface type
+</violation>
+<violation beginline="30" endline="30" begincolumn="12" endcolumn="88" rule="UnnecessaryModifier" ruleset="Code Style" package="com.coding.exercise.bankapp.service" class="BankingService" method="findTransactionsByAccountNumber" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'findTransactionsByAccountNumber': the method is declared in an interface type
+</violation>
+</file>
+</pmd>
